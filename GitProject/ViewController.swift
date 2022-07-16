@@ -19,6 +19,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupHierarchy()
+        setupLayout()
+    }
+
+    func setupHierarchy() {
+        view.addSubview(label)
+    }
+    
+    func setupLayout() {
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }
 
